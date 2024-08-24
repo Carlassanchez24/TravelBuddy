@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import Button from "@/components/ui/Button";
+import Navbar from "../components/ui/navbar/Navbar.jsx"
 
 
 const Home = () => {
@@ -10,7 +11,10 @@ const Home = () => {
     };
 
     return (
+        <>
+        <Navbar/>
         <div className="flex flex-col items-center justify-center min-h-screen text-center bg-backgroundGray">
+            
             <h1 className="font-bold text-46 text-primaryBlue">Travel Buddy</h1>
             <p className="mb-8 text-16 text-neutralGray">
                 Plan your next adventure with ease.
@@ -19,6 +23,7 @@ const Home = () => {
                 Start Exploring!
             </Button>
         </div>
+        </>
     );
 };
 
