@@ -5,14 +5,13 @@ const Button = ({ children, onClick, type = 'button', className = '' }) => {
     <button
       type={type}
       onClick={onClick}
-      className={`bg-primaryBlue text-secondaryWhite w-[354px] h-[50px] rounded-full text-16 font-bold hover:bg-primaryBlue/90 ${className}`}
+      className={`w-[334px] h-[50px] rounded-full text-16 font-bold bg-primaryBlue text-secondaryWhite hover:bg-primaryBlue/90 focus:outline-none focus:ring-2 focus:ring-primaryBlue focus:ring-opacity-50 ${className}`}
     >
       {children}
     </button>
   );
 };
 
-// Validación de props
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
