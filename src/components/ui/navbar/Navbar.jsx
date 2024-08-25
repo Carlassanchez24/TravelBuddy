@@ -4,7 +4,7 @@ import { Home, User, MessageSquare } from 'feather-icons-react';
 
 
 
-const NavBar = () => {
+const Navbar = () => {
     return (
         <nav className="fixed bottom-0 left-0 w-full shadow-lg bg-card" aria-label="Main Navigation">
             <ul className="flex justify-around py-2">
