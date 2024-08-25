@@ -1,52 +1,64 @@
 # Travel Buddy
 
 
-## Índice 📝
+## Index 📝
 
-- [Descripción](#descripción-)
-- [Instalación](#instalación-)
-  - [Requisitos previos](#requisitos-previos)
-  - [Instalación del proyecto](#instalación-del-proyecto)
-- [Uso](#uso-)
-- [Estructura del proyecto](#estructura-del-proyecto)
-- [Tecnologías](#tecnologías-)
-- [Contribuición](#contribuición-)
-  - [Convenciones del proyecto](#convenciones-del-proyecto)
+- [Description](#descripción-)
+- [Installation](#installation-)
+- [Prerequisites](#prerequisites-)
+- [Project Installation](#project-installation-)
+- [Use](#use-)
+- [Project Structure](#project-structure-)
+- [Technologies](#technologies-)
+- [Contribution](#contribution-)
+- [Project Conventions](#project-conventions-)
 - [Developers](#developers-)
-- [Capturas de pantalla](#capturas-de-pantalla)
+- [Screenshots](#screenshots)
 
-## Descripción 💡
-
-
-
-## Instalación 💾
-
-### Requisitos previos
+## Description 💡
 
 
-### Instalación del proyecto
 
-1. Clonar el repositorio:
+
+## Installation 💾
+
+### Prerequisites
+
+- Visual Studio Code, Git Bash, Vite, Node.js (14 or superior), npm (version 6 or superior), React, TailwindCSS 
+
+
+### Project Installation
+
+1. Clone the repository:
 
 ```bash
  git clone https://github.com/Carlassanchez24/TravelBuddy.git
 ```
 
-2. Instalar dependencias:
+2. Enter the project directory:
+```bash
+ cd TravelBuddy
+```
+
+3. Install the dependencies:
+```bash
+npm i
+npm run dev
+```
 
 
+## Use ⌨️
 
-## Uso ⌨️
+In order to visualize the project:
 
-Para visualizar el proyecto:
-
-1. Ejecuta el servidor de desarrollo:
+1. Run the development server:
    ```bash
+   npm install 
    npm run dev
    ```
-2. Abre el local host en tu navegador para ver la aplicación.
+2. Open the local host in your browser to view the application.
 
-## Estructura del proyecto 📐
+## Project Structure 📐
 
 ```plaintext
 /
@@ -77,19 +89,19 @@ Para visualizar el proyecto:
 
 ```
 
-- **public/:** Contiene los recursos estáticos del proyecto como imágenes, iconos y fuentes.
-- **src/:** Contiene los archivos fuente de la aplicación.
-  - **_components/:_** Contiene los componentes reutilizables de React.
-    - **_homepage/:_** Contiene todos los componentes, separados por carpetas individuales, que forman la parte de homepage del proyecto.
-    - **_tracker/:_** Contiene todos los componentes, separados por carpetas individuales, que forman la parte de tracker del proyecto.
-    - **_ui/:_** Contiene los componentes importados de la librería shadcn.
-  - **_config/:_** Contiene el arcihvo urls.js, que nos ayuda a dinamizar la llamada a la API.
-  - **layout:** Carpeta que contiene las rutas de los dos layouts principales (homepage y tracker) de la aplicación.
-  - **_pages:_** Carpeta que contiene las rutas a las páginas dinámicas de la aplicación.
-  - **_router:_** Dentro del que se encuentra index.jsx, que contiene la lógica de rutas de la aplicación.
-  - **_services:_** Dentro del que se encuentra useApi.jsx con la llamada a la API reutilizada en todos los apartados de la aplicación.
+- **public/:** Contains the project's static resources such as images, icons, and fonts.
+- **src/:** Contains the source files of the application.
+  - **_components/:_** Contains React's reusable components.
+    - **_homepage/:_** Contains all the components, separated by individual folders, that make up the project's homepage.
+    - **_tracker/:_** Contains all the components, separated by individual folders, that make up the tracker section of the project.
+    - **_ui/:_** Contains the components imported from the shadcn library.
+  - **_config/:_** Contains the urls.js file, which helps us streamline the API call.
+  - **layout:** Folder containing the paths to the application's dynamic pages.
+  - **_pages:_** Folder containing the paths to the application's dynamic pages.
+  - **_router:_** Contains the file index.jsx with the application's routing logic.
+  - **_services:_** Contains the file useApi.jsx with the API call reused in all sections of the application.
 
-## Tecnologías 🔬
+## Technologies 🔬
 
 - [HTML5](https://developer.mozilla.org/es/docs/Web/Guide/HTML/HTML5)
 - [CSS3](https://developer.mozilla.org/es/docs/Web/CSS/CSS3)
@@ -99,30 +111,30 @@ Para visualizar el proyecto:
 - [TailwindCSS](https://tailwindcss.com/)
 - [Shadcn // ui](https://ui.shadcn.com/)
 
-## Contribuición 💻
+## Contribution 💻
 
-1. Haz fork al repositorio.
-2. Crea una nueva rama: `git checkout -b feature-name`.
-3. Haz tus cambios.
-4. Haz push de tu rama: `git push origin feature-name`.
-5. Haz un pull request.
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature-name`.
+3. Make your changes and commit.
+4. Push your branch to your fork: `git push origin feature-name`.
+5. Open a pull request.
 
-### Convenciones del proyecto
+### Project Conventions
 
-Uso de GitFlow.
+Use of GitFlow.
 
-Trabajamos desde y a la rama dev.
+We work from and to the dev branch.
 
-Estilos CSS con Tailwind CSS.
+CSS styles with Tailwind CSS.
 
-Usamos librería [shadcn]() para ciertos componentes.
+Use of [shadcn]() library for certain components.
 
-Nombramiento de las carpetas y documentos jsx:
+Naming of directories and files following the scheme below:
 
 ```bash
- componentes
-    soyUnComponente 📂
-        SoyUnComponente.jsx
+ components
+    iamAComponent 📂
+        IamAComponent.jsx
 ```
 
 ## Developers 👩‍💻
@@ -133,4 +145,19 @@ Nombramiento de las carpetas y documentos jsx:
 - [Carla Sánchez](https://github.com/Carlassanchez24)
 - [Evelyn Quevedo](https://github.com/evymari)
 
-## Capturas de Pantalla 📸
+<p> <a href="https://github.com/jess-ar">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"> **Jess Arroyo**</a></p>
+    
+<p> <a href="https://github.com/pilimuino">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"> **Pili Muiño**</a></p>
+
+<p> <a href="https://github.com/Carlassanchez24">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"> **Carla Sánchez**</a></p>
+    
+<p> <a href="https://github.com/evymari">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"> **Evelyn Quevedo**</a></p>
+    
+<p> <a href="https://github.com/loren-2">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"> **Lorena**</a></p>
+
+## Screenshots 📸
