@@ -4,9 +4,6 @@ import tailwindcssAnimate from "tailwindcss-animate";
 export default {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{js,jsx}',
-    './components/**/*.{js,jsx}',
-    './app/**/*.{js,jsx}',
     './src/**/*.{js,jsx}',
   ],
   prefix: "",
@@ -15,7 +12,7 @@ export default {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "sm": "640px",
       },
     },
     extend: {
@@ -65,7 +62,6 @@ export default {
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
-        poppins: ['Poppins', 'sans-serif'],
       },
       fontSize: {
         'text-xs': ['12px', '1.5'],
