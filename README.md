@@ -3,7 +3,7 @@
 
 ## Index 📝
 
-- [Description](#descripción-)
+- [Description](#description-)
 - [Installation](#installation-)
 - [Prerequisites](#prerequisites-)
 - [Project Installation](#project-installation-)
@@ -13,7 +13,7 @@
 - [Contribution](#contribution-)
 - [Project Conventions](#project-conventions-)
 - [Developers](#developers-)
-- [Screenshots](#screenshots)
+- [Screenshots](#screenshots-)
 
 ## Description 💡
 
@@ -32,18 +32,18 @@
 1. Clone the repository:
 
 ```bash
- git clone https://github.com/Carlassanchez24/TravelBuddy.git
+  git clone https://github.com/Carlassanchez24/TravelBuddy.git
 ```
 
 2. Enter the project directory:
 ```bash
- cd TravelBuddy
+  cd TravelBuddy
 ```
 
 3. Install the dependencies:
 ```bash
-npm i
-npm run dev
+  npm i
+  npm run dev
 ```
 
 
@@ -57,6 +57,7 @@ In order to visualize the project:
    npm run dev
    ```
 2. Open the local host in your browser to view the application.
+
 
 ## Project Structure 📐
 
@@ -101,6 +102,7 @@ In order to visualize the project:
   - **_router:_** Contains the file index.jsx with the application's routing logic.
   - **_services:_** Contains the file useApi.jsx with the API call reused in all sections of the application.
 
+
 ## Technologies 🔬
 
 - [HTML5](https://developer.mozilla.org/es/docs/Web/Guide/HTML/HTML5)
@@ -111,6 +113,7 @@ In order to visualize the project:
 - [TailwindCSS](https://tailwindcss.com/)
 - [Shadcn // ui](https://ui.shadcn.com/)
 
+
 ## Contribution 💻
 
 1. Fork the repository.
@@ -119,7 +122,7 @@ In order to visualize the project:
 4. Push your branch to your fork: `git push origin feature-name`.
 5. Open a pull request.
 
-### Project Conventions
+## Project Conventions
 
 Use of GitFlow.
 
@@ -139,12 +142,6 @@ Naming of directories and files following the scheme below:
 
 ## Developers 👩‍💻
 
-- [Jessica Arroyo](https://github.com/jess-ar)
-- [Lorena Ballen](https://github.com/loren-2)
-- [Pilar Muiño](https://github.com/pilimuino)
-- [Carla Sánchez](https://github.com/Carlassanchez24)
-- [Evelyn Quevedo](https://github.com/evymari)
-
 <p> <a href="https://github.com/jess-ar">
     <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"> **Jess Arroyo**</a></p>
     
@@ -159,5 +156,6 @@ Naming of directories and files following the scheme below:
     
 <p> <a href="https://github.com/loren-2">
     <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"> **Lorena**</a></p>
+
 
 ## Screenshots 📸
