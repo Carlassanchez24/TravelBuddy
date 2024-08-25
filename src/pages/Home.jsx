@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import Button from "@/components/ui/Button";
+import Navbar from "../components/ui/navbar/Navbar.jsx"
 const homeImage = '/images/home.png';
+
 
 const Home = () => {
     const navigate = useNavigate();
@@ -10,6 +12,8 @@ const Home = () => {
     };
 
     return (
+        <>
+        <Navbar/>
         <div 
             className="relative flex flex-col items-center justify-center min-h-screen p-4 text-center bg-center bg-cover"
             style={{ backgroundImage: `url(${homeImage})` }}>
@@ -24,6 +28,7 @@ const Home = () => {
                     Start Exploring!
                 </Button>
         </div>
+        </>
     );
 };
 
