@@ -1,9 +1,12 @@
+import Navbar from "@/components/ui/navbar/Navbar"
+import UnderConstruction from "@/components/UnderConstruction";
 
 const Page2 = () => {
 
   return (
     <div>
- <Navbar></Navbar>
+      <UnderConstruction />
+      <Navbar />
     </div>
   );
 };
