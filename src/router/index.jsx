@@ -1,10 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom';
-import Home from '../pages/Home';
-import Page1 from '../pages/Page1';
-import Page2 from '../pages/Page2';
-import UnderConstruction from '../components/UnderConstruction';
-
-import Page3 from '../pages/Page3'; // Importa la nueva página
+import Home from '@/pages/Home';
+import Page1 from '@/pages/Page1';
+import Page2 from '@/pages/Page2';
+import Page3 from '@/pages/Page3';
+import UnderConstruction from '@/components/UnderConstruction';
 
 const router = createBrowserRouter([
     {
@@ -12,7 +11,6 @@ const router = createBrowserRouter([
         element: <Home />,
     },
     {
-        path: '/login',
         path: '/page1', // Welcome
         element: <Page1 />,
     },
