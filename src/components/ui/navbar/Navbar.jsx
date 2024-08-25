@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Home, User, MessageSquare } from 'feather-icons-react';
 
-const NavBar = () => {
+const Navbar = () => {
     return (
         <nav className="bg-card fixed bottom-0 left-0 w-full shadow-lg" aria-label="Main Navigation">
             <ul className="flex justify-around py-2">
@@ -24,7 +24,7 @@ const NavBar = () => {
                             `flex flex-col items-center ${isActive ? 'text-primary-foreground' : ''} transition-colors duration-300`}
                         aria-label="Account"
                     >
-                        <User className="h-6 w-6 text-accentBlack group-hover:text-primaryBlue transition-colors duration-300" />
+                        <User className="h-6 w-6 text-accentBlack group-hover:text-primaryBlue transition-colors duration-300" />conta
                         <span className="text-sm text-accentBlack group-hover:text-primaryBlue transition-colors duration-300 font-roboto">Account</span>
                     </NavLink>
                 </li>
@@ -44,4 +44,4 @@ const NavBar = () => {
     );
 };
 
-export default NavBar;
+export default Navbar;
