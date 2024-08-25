@@ -1,11 +1,13 @@
+import Navbar from "../components/ui/navbar/Navbar.jsx"
 import { useNavigate } from 'react-router-dom';
 import Button from "@/components/ui/Button";
 
 const Page1 = () => {
   const backgroundImage = '/images/girl.png';
   const navigate = useNavigate();
-
   return (
+    <div>
+      <Navbar></Navbar>
     <div className="relative flex flex-col items-center justify-center min-h-screen p-4 bg-backgroundGray">
       <div className="relative flex flex-col items-center" style={{ top: '-50px' }}>
         <img
