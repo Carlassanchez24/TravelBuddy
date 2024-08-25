@@ -14,15 +14,6 @@ const Home = () => {
     return (
         <>
         <Navbar/>
-        <div className="flex flex-col items-center justify-center min-h-screen text-center bg-backgroundGray">
-            
-            <h1 className="font-bold text-46 text-primaryBlue">Travel Buddy</h1>
-            <p className="mb-8 text-16 text-neutralGray">
-                Plan your next adventure with ease.
-            </p>
-            <Button className="mt-4" onClick={handleExplore}>
-                Start Exploring!
-            </Button>
         <div 
             className="relative flex flex-col items-center justify-center min-h-screen p-4 text-center bg-center bg-cover"
             style={{ backgroundImage: `url(${homeImage})` }}>
