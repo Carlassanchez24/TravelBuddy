@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
-import App from '@/App'
+import Layout1 from '@/layout/Layout1';
 import Home from '@/pages/Home';
 import Page1 from '@/pages/Page1';
 import Page2 from '@/pages/Page2';
@@ -12,41 +12,28 @@ import UnderConstruction from '@/components/UnderConstruction';
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <App/>,
+        element: <Layout1 />,
         children: [
             {
-                path: '/',
+                index: true,
                 element: <Home />,
             },
             {
                 path: 'page1',
-                element: <Page1/>,
+                element: <Page1 />,
             },
             {
-                path: 'page2', //Log in
+                path: 'page2',
                 element: <Page2 />,
-                errorElement: <UnderConstruction />
+                errorElement: <UnderConstruction />,
             },
             {
-                path: 'page3', // Create Account
+                path: 'page3',
                 element: <Page3 />,
-                errorElement: <UnderConstruction />
-            },
-            {
-                path: 'layout1',
-                element: <Layout1/>,
-            },
-            {
-                path: 'layout2',
-                element: <Layout2/>,
-            },
-            {
-                path: '*', // Welcome
-                element: <Home />,
+                errorElement: <UnderConstruction />,
             },
         ],
     },
-    
 ]);
 
 export default router;
