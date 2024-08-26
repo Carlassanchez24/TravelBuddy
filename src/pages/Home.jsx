@@ -1,14 +1,26 @@
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import Button from "@/components/ui/Button";
-const homeImage = '/images/home.png';
 
+
+const homeImage = '/images/home.webp';
 
 const Home = () => {
     const navigate = useNavigate();
+    const [hasError, setHasError] = useState(false);
 
     const handleExplore = () => {
-        navigate('page1');
+        try {
+            navigate('page1');
+        } catch (error) {
+            console.error("Error while browsing:", error);
+            setHasError(true);
+        }
     };
+    
+    if (hasError) {
+        return <h1>Something went wrong. Try reloading the page.</h1>;
+    }
 
     return (
         <>
