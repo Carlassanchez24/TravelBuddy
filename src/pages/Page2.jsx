@@ -1,11 +1,14 @@
 import Navbar from "@/components/ui/navbar/Navbar"
-import UnderConstruction from "@/components/UnderConstruction";
+import Login from "@/components/login"
+
 
 const Page2 = () => {
 
   return (
     <div>
-      <UnderConstruction />
+      <Login/>
+      
+      
       <Navbar />
     </div>
   );
