@@ -1,4 +1,4 @@
-import Navbar from "@/components/ui/navbar/Navbar"
+
 import UnderConstruction from "@/components/UnderConstruction";
 
 const Page2 = () => {
@@ -6,7 +6,7 @@ const Page2 = () => {
   return (
     <div>
       <UnderConstruction />
-      <Navbar />
+      
     </div>
   );
 };
