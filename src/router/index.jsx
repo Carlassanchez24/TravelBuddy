@@ -4,8 +4,6 @@ import Home from '@/pages/Home';
 import Page1 from '@/pages/Page1';
 import Page2 from '@/pages/Page2';
 import Page3 from '@/pages/Page3';
-import Layout1 from '@/layout/Layout1';
-import Layout2 from '@/layout/Layout2';
 import UnderConstruction from '@/components/UnderConstruction';
 
 
