@@ -1,4 +1,4 @@
-import Navbar from "../components/ui/navbar/Navbar.jsx"
+import Navbar from "@/components/ui/navbar/Navbar.jsx"
 import { useNavigate } from 'react-router-dom';
 import Button from "@/components/ui/Button";
 
@@ -9,12 +9,11 @@ const Page1 = () => {
     
     <div className="relative flex flex-col items-center justify-center min-h-screen p-4 bg-backgroundGray">
       <div className="relative flex flex-col items-center" style={{ top: '-50px' }}>
-      <Navbar/>
         <img
           src={backgroundImage}
-          alt="Travel"
+          alt="The image shows a woman in a suit, resting her right hand on a suitcase and her left hand inside her trouser pocket"
           className="w-[369px] h-[369px] mb-4"
-        />
+          />
         <h1 className="mb-4 text-3xl font-bold text-center text-primaryBlue">Plan your trip</h1>
         <p className="mb-8 text-xs text-center text-accentBlack">
           Custom and fast planning <br />
@@ -27,6 +26,7 @@ const Page1 = () => {
           Create Account
         </Button>
       </div>
+      <Navbar/>
     </div>
   );
 };
