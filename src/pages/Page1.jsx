@@ -1,20 +1,24 @@
-import Navbar from "@/components/ui/navbar/Navbar.jsx"
 import { useNavigate } from 'react-router-dom';
 import Button from "@/components/ui/Button";
 
 const Page1 = () => {
-  const backgroundImage = '/images/girl.png';
+  const backgroundImage = '/images/girl.webp';
   const navigate = useNavigate();
   return (
     
-    <div className="relative flex flex-col items-center justify-center min-h-screen p-4 bg-backgroundGray">
-      <div className="relative flex flex-col items-center" style={{ top: '-50px' }}>
+    <div className="relative flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] p-4 bg-backgroundGray">
+    <div className="relative flex flex-col items-center -mt-12">
         <img
           src={backgroundImage}
           alt="The image shows a woman in a suit, resting her right hand on a suitcase and her left hand inside her trouser pocket"
           className="w-[369px] h-[369px] mb-4"
+          loading="lazy"
+          onError={(e) => {
+            e.target.src = '/images/image_not_available.webp';
+            e.target.alt = 'Image not available';
+          }}
           />
-        <h1 className="mb-4 text-3xl font-bold text-center text-primaryBlue">Plan your trip</h1>
+        <h1 className="mb-4 text-3xl font-bold text-center text-primaryBlue" aria-label="Plan your trip">Plan your trip</h1>
         <p className="mb-8 text-xs text-center text-accentBlack">
           Custom and fast planning <br />
           with a low price
@@ -26,7 +30,6 @@ const Page1 = () => {
           Create Account
         </Button>
       </div>
-      <Navbar/>
     </div>
   );
 };
