@@ -25,7 +25,7 @@ const Page1 = () => {
         </p>
       </div>
       <div className="flex flex-col items-center w-full">
-        <Button className="w-[334px] mb-4 font-roboto" onClick={() => navigate('/page2')}>Log in</Button>
+        <Button className="w-[334px] mb-4 font-roboto" onClick={() => navigate('/login')}>Log in</Button>
         <Button textColor="black" className="w-[334px] h-[50px] rounded-full text-16 bg-secondaryWhite shadow-lg font-roboto" onClick={() => navigate('/page3')}>
           Create Account
         </Button>
