@@ -11,7 +11,7 @@ const Home = () => {
 
     const handleExplore = () => {
         try {
-            navigate('page1');
+            navigate('welcome');
         } catch (error) {
             console.error("Error while browsing:", error);
             setHasError(true);
