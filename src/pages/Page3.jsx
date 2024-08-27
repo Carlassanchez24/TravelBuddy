@@ -1,10 +1,12 @@
+
 import Navbar from "@/components/ui/navbar/Navbar.jsx"
-import UnderConstruction from "@/components/UnderConstruction";
+import singUp from "@/components/Singup";
+
 
 const Page3 = () => {
     return (
         <div>
-            <UnderConstruction />
+            <singUp></singUp>
             <Navbar />
         </div>
     )
