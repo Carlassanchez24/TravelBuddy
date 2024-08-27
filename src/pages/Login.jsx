@@ -1,11 +1,11 @@
-
-import UnderConstruction from "@/components/UnderConstruction";
+import Login from "@/components/Login";
 
 const Page2 = () => {
 
   return (
     <div>
-      <UnderConstruction />
+      <Login/>
+      
       
     </div>
   );
