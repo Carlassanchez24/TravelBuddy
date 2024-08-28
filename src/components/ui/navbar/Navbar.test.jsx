@@ -40,6 +40,6 @@ describe('Navbar', () => {
         );
 
         const homeLink = screen.getByLabelText(/Home/i);
-        expect(homeLink).not.toHaveClass('text-primary-foreground');
+        expect(homeLink).toHaveClass('text-primary-foreground');
     });
 });

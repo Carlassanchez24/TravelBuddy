@@ -1,3 +1,4 @@
+
 import axios from "axios";
 
 
@@ -14,23 +15,21 @@ const apiClient = axios.create({
 
 export const loginUser = async (email, password) => {
     try {
-        const response = await apiClient.post('/login', { email, password });
+        const response = await axios.post('http://127.0.0.1:8000/api/users/login/', {
+            email,
+            password
+        });
         return response.data;
-    }
-    catch (error) {
-        return Error(error.response?.data?.error || 'An error occurred');
+    } catch (error) {
+        return new Error(error.response?.data?.error || 'An error occurred');
     }
 };
 
-
 export const registerUser = async (username, email, password) => {
     try {
-        const response = await apiClient.post('/register', { username, email, password });
+        const response = await apiClient.post('/register/', { username, email, password });
         return response.data;
+    } catch (error) {
+        return new Error(error.response?.data?.error || 'An error occurred');
     }
-    catch (error) {
-        return Error(error.response?.data?.error || 'An error occurred');
-
-    }
-
-}
+};
