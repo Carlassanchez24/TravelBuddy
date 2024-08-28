@@ -3,7 +3,7 @@ import SignUp from "@/components/SignUp";
 const Page3 = () => {
     return (
         <div>
-            <SignUp /> 
+            <SignUp/> 
         </div>
     )
 }
