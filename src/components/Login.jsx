@@ -1,9 +1,10 @@
 import { useState } from "react";
 import Button from "./ui/Button";
 import { loginUser } from "@/services/api";
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
-
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -81,13 +82,13 @@ function Login() {
               </div>
               <Button
                 type="submit"
-                className=" text-white rounded-full font-semibold hover:bg-blue-700 transition-colors"
+                className=" text-white rounded-full font-semibold hover:bg-blue-700 transition-colors"onClick={() => navigate('/Inspireme')}
               >
                 Log in
               </Button>
               <div className="w-[334px] mb-4 text-center mt-6 text-sm text-gray-600">
                 Don't have an account yet?{" "}
-                <a href="#" className="text-blue-600 hover:underline">
+                <a href="#" className="text-blue-600 hover:underline"onClick={() => navigate('/SignUp')}>
                   Sign up
 
 
