@@ -10,7 +10,7 @@ const Navbar = () => {
             <ul className="flex justify-around py-2">
                 <li className="flex flex-col items-center group">
                     <NavLink 
-                        to="/home" 
+                        to="/" 
                         className={({ isActive }) => 
                             `flex flex-col items-center ${isActive ? 'text-primary-foreground' : ''} transition-colors duration-300`}
                         aria-label="Home"
@@ -21,7 +21,7 @@ const Navbar = () => {
                 </li>
                 <li className="flex flex-col items-center group">
                     <NavLink 
-                        to="/account" 
+                        to="/page2" 
                         className={({ isActive }) => 
                             `flex flex-col items-center ${isActive ? 'text-primary-foreground' : ''} transition-colors duration-300`}
                         aria-label="Account"
@@ -35,7 +35,7 @@ const Navbar = () => {
                 </li>
                 <li className="flex flex-col items-center group">
                     <NavLink 
-                        to="/chatbot" 
+                        to="/page3" 
                         className={({ isActive }) => 
                             `flex flex-col items-center ${isActive ? 'text-primary-foreground' : ''} transition-colors duration-300`}
                         aria-label="Chatbot"
