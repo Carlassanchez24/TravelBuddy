@@ -82,7 +82,7 @@ function Login() {
               </div>
               <Button
                 type="submit"
-                className="font-semibold text-white transition-colors rounded-full  hover:bg-blue-700" onClick={() => navigate('/Inspireme')}
+                className="font-semibold text-white transition-colors rounded-full hover:bg-blue-700" onClick={() => navigate('/page3')}
               >
                 Log in
               </Button>
