@@ -5,6 +5,8 @@ import Welcome from '@/pages/Welcome';
 import Login from '@/pages/Login';
 import SignUp from '@/pages/SignUp';
 import UnderConstruction from '@/components/UnderConstruction';
+import RegisterTest from '@/components/RegisterTest';
+
 
 
 const router = createBrowserRouter([
@@ -29,6 +31,10 @@ const router = createBrowserRouter([
                 path: 'signup',
                 element: <SignUp/>,
                 errorElement: <UnderConstruction />,
+            },
+            {
+                path: 'register-test',  
+                element: <RegisterTest />, 
             },
         ],
     },

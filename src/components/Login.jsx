@@ -9,34 +9,34 @@ function Login() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/; 
+  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
   const validateEmail = (email) => { const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; return re.test(String(email).toLowerCase()); };
 
-  
+
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    if (!passwordRegex.test(password)) { setError('Password or login empty.'); return; } 
+    if (!passwordRegex.test(password)) { setError('Password or login empty.'); return; }
     if (!validateEmail(email)) { setError('Invalid email format'); return; }
 
     try {
-       await loginUser(email, password);
-       setEmail('');
-       setPassword('');
+      await loginUser(email, password);
+      setEmail('');
+      setPassword('');
     }
     catch (error) {
       setError('An error occurred during login')
-  }
+    }
   }
 
   return (
     <>
 
-      <div className="min-h-screen flex items-center justify-center bg-gray-100 ">
-        <div className=" relative flex flex-col justify-start pb-40"><h2 className="text-2xl font-bold  text-left mt-2 mb-40 onClick={() => navigate('/inspireme')">Log in</h2>
+      <div className="flex items-center justify-center min-h-screen bg-gray-100 ">
+        <div className="relative flex flex-col justify-start pb-40 "><h2 className="text-2xl font-bold  text-left mt-2 mb-40 onClick={() => navigate('/inspireme')">Log in</h2>
           <div className="relative mb-1">
 
-            {error && <p className="text-red-500 text-center mb-4">{error}</p>}
+            {error && <p className="mb-4 text-center text-red-500">{error}</p>}
 
             <form onSubmit={handleLogin}>
               <div className="mb-4">
@@ -45,20 +45,20 @@ function Login() {
                   placeholder="Mail"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="shadow-lg w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  className="w-full px-4 py-2 border rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
                 />
               </div>
-              <div className="mb-8 relative">
+              <div className="relative mb-8">
                 <input
                   type="password"
                   placeholder="Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="shadow-lg w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  className="w-full px-4 py-2 border rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
                 />
                 <span className="absolute inset-y-0 right-0 flex items-center pr-3">
                   <svg
-                    className="h-5 w-5 text-gray-500"
+                    className="w-5 h-5 text-gray-500"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -75,20 +75,20 @@ function Login() {
                   </svg>
                 </span>
               </div>
-              <div className="text-right mb-4">
+              <div className="mb-4 text-right">
                 <a href="#" className="text-sm text-gray-600 hover:text-blue-600">
                   Forgot your password?
                 </a>
               </div>
               <Button
                 type="submit"
-                className=" text-white rounded-full font-semibold hover:bg-blue-700 transition-colors"onClick={() => navigate('/Inspireme')}
+                className="font-semibold text-white transition-colors rounded-full  hover:bg-blue-700" onClick={() => navigate('/Inspireme')}
               >
                 Log in
               </Button>
               <div className="w-[334px] mb-4 text-center mt-6 text-sm text-gray-600">
                 Don't have an account yet?{" "}
-                <a href="#" className="text-blue-600 hover:underline"onClick={() => navigate('/SignUp')}>
+                <a href="#" className="text-blue-600 hover:underline" onClick={() => navigate('/SignUp')}>
                   Sign up
 
 
