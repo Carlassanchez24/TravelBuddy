@@ -5,7 +5,7 @@ import Welcome from '@/pages/Welcome';
 import Login from '@/pages/Login';
 import SignUp from '@/pages/SignUp';
 import UnderConstruction from '@/components/UnderConstruction';
-import TravelFilter from '@/pages/TravelFilter';
+import Inspireme from '@/pages/Inspireme';
 
 
 const router = createBrowserRouter([
@@ -32,10 +32,14 @@ const router = createBrowserRouter([
                 errorElement: <UnderConstruction />,
             },
             {
-                path: 'travelfilter',
-                element: <TravelFilter/>,
-                errorElement: <TravelFilter />,
+                path: 'inspireme',
+                element: <Inspireme/>,
+                errorElement: <UnderConstruction />,
             },
+            {
+                path: '*', 
+                element: <UnderConstruction/>,
+            }
         ],
     },
 ]);
