@@ -21,7 +21,7 @@ const Navbar = () => {
                 </li>
                 <li className="flex flex-col items-center group">
                     <NavLink 
-                        to="/page2" 
+                        to="/UnderConstruccion" 
                         className={({ isActive }) => 
                             `flex flex-col items-center ${isActive ? 'text-primary-foreground' : ''} transition-colors duration-300`}
                         aria-label="Account"
@@ -35,13 +35,13 @@ const Navbar = () => {
                 </li>
                 <li className="flex flex-col items-center group">
                     <NavLink 
-                        to="/page3" 
+                        to="/Inspireme" 
                         className={({ isActive }) => 
                             `flex flex-col items-center ${isActive ? 'text-primary-foreground' : ''} transition-colors duration-300`}
-                        aria-label="Chatbot"
+                        aria-label="Inspireme"
                     >
                         <MessageSquare className="w-6 h-6 transition-colors duration-300 text-accentBlack group-hover:text-primaryBlue" />
-                        <span className="text-sm transition-colors duration-300 text-accentBlack group-hover:text-primaryBlue font-roboto">Chatbot</span>
+                        <span className="text-sm transition-colors duration-300 text-accentBlack group-hover:text-primaryBlue font-roboto">Inspireme</span>
                     </NavLink>
                 </li>
             </ul>
