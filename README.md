@@ -16,7 +16,7 @@
 - [Screenshots](#screenshots-)
 
 ## Description 💡
-Travel Buddy is a travel planner app that provides recommendations of tourist attractions to its registered users. The primary objective of this development is to enable users to find uselful information about weather and tourist attractions before travelling to a certain destinatioon.
+Travel Buddy is a travel planner app that provides recommendations of tourist attractions to its registered users. The goal of this development is to enable users to find uselful information about weather and tourist attractions before travelling to a certain destination. Take a look at our app here https://travel-buddy-f5.netlify.app/
 
 ## Installation 💾
 
@@ -100,11 +100,9 @@ In order to visualize the project:
 - **src/:** Contains the source files of the application.
   - **_components/:_** Contains React's reusable components.
     -  **_ui/:_** Contains the components imported from the shadcn library.  
-    - **_Home/:_** Contains all the components that make up the project's homepage.
-    - **_tracker/:_** Contains all the components, separated by individual folders, that make up the tracker section of the project.
   - **_config/:_** Contains the urls.js file, which helps us streamline the API call.
   - **layout:** Folder containing the paths to the application's dynamic pages.
-  - **_pages:_** Folder containing the paths to the application's dynamic pages.
+  - **_pages:_** Contains all the pages that make up the different views of the app.
   - **_router:_** Contains the file index.jsx with the application's routing logic.
   - **_services:_** Contains the file useApi.jsx with the API call reused in all sections of the application.
 
