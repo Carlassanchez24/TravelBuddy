@@ -1,7 +1,12 @@
+import TravelApp from "@/components/TravelApp"
+import Navbar from "@/components/ui/navbar/Navbar"
 
 const Inspireme = () => {
   return (
-    <div>Inspireme</div>
+    <>
+    <TravelApp></TravelApp>
+    <Navbar></Navbar>
+    </>
   )
 }
 

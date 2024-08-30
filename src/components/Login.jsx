@@ -2,13 +2,15 @@ import { useState } from "react";
 import Button from "./ui/Button";
 import { loginUser } from "@/services/api";
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-
+  const [showPassword, setShowPassword] = useState(false);
   const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
   const validateEmail = (email) => { const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; return re.test(String(email).toLowerCase()); };
 
@@ -74,6 +76,20 @@ function Login() {
                     ></path>
                   </svg>
                 </span>
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute inset-y-0 right-0 flex items-center pr-3"
+                  aria-label={showPassword ? "Hide password" : "Show password"}
+                >
+                  <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute inset-y-0 right-0 flex items-center pr-3"
+                  aria-label={showPassword ? "Hide password" : "Show password"}
+                ></button>
               </div>
               <div className="mb-4 text-right">
                 <a href="#" className="text-sm text-gray-600 hover:text-blue-600">
@@ -82,7 +98,7 @@ function Login() {
               </div>
               <Button
                 type="submit"
-                className="font-semibold text-white transition-colors rounded-full hover:bg-blue-700" onClick={() => navigate('/page3')}
+                className="font-semibold text-white transition-colors rounded-full hover:bg-blue-700"onClick={() => navigate('/Inspireme')}
               >
                 Log in
               </Button>
