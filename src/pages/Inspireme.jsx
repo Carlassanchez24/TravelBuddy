@@ -1,7 +1,11 @@
+import PhotoSearch from "@/components/PhotoSearch"
+
 
 const Inspireme = () => {
   return (
-    <div>Inspireme</div>
+    <div>
+    <PhotoSearch />
+    </div>
   )
 }
 
