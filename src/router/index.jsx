@@ -36,6 +36,10 @@ const router = createBrowserRouter([
                 element: <Inspireme/>,
                 errorElement: <UnderConstruction />,
             },
+            {
+                path: '*', 
+                element: <UnderConstruction/>,
+            }
         ],
     },
 ]);
