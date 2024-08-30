@@ -5,10 +5,8 @@ import Welcome from '@/pages/Welcome';
 import Login from '@/pages/Login';
 import SignUp from '@/pages/SignUp';
 import UnderConstruction from '@/components/UnderConstruction';
-import RegisterTest from '@/components/RegisterTest';
-import LoginTest from '@/components/LoginTest';
-import Page3 from '@/pages/Page3';
-
+import Inspireme from '@/pages/Inspireme';
+import TravelFilter from '@/pages/TravelFilter';
 
 
 const router = createBrowserRouter([
@@ -35,18 +33,18 @@ const router = createBrowserRouter([
                 errorElement: <UnderConstruction />,
             },
             {
-                path: 'register-test',  
-                element: <RegisterTest />, 
-            },
-            {
-                path: 'login-test', 
-                element: <LoginTest />,
-            },
-            {
-                path: 'page3',
-                element: <Page3/>,
+                path: 'inspireme',
+                element: <Inspireme/>,
                 errorElement: <UnderConstruction />,
             },
+            {
+                path: '*', 
+                element: <UnderConstruction/>,
+            },
+            {
+                path: 'travelfilter', 
+                element: <TravelFilter/>,
+            }
         ],
     },
 ]);

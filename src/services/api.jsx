@@ -2,9 +2,7 @@
 import axios from "axios";
 
 
-const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000/api/users';
-
-
+const API_URL = 'http://127.0.0.1:8000/api/users';
 
 
 const apiClient = axios.create({
@@ -17,7 +15,7 @@ const apiClient = axios.create({
 
 export const loginUser = async (email, password) => {
     try {
-        const response = await axios.post(`${API_URL}/login/`, {
+        const response = await axios.post('http://127.0.0.1:8000/api/users/login/', {
             email,
             password
         });
@@ -26,7 +24,6 @@ export const loginUser = async (email, password) => {
         return new Error(error.response?.data?.error || 'An error occurred');
     }
 };
-
 
 export const registerUser = async (username, email, password) => {
     try {
