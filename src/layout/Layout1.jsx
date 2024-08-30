@@ -6,7 +6,6 @@ const Layout1 = () => {
 
     return (
         <div>
-            
             <main>
                 <Outlet />
             </main>

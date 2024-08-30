@@ -125,7 +125,7 @@ function SignUp() {
               
               <Button
                 type="submit"
-                className=" text-white rounded-full font-semibold hover:bg-blue-700 transition-colors " onClick={() => navigate('/Inspireme')}
+                className=" text-white rounded-full font-semibold hover:bg-blue-700 transition-colors " onClick={() => navigate('/TravelFilter')}
 
               >
 
