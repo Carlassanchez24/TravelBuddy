@@ -1,4 +1,4 @@
-# Travel Buddy
+# Travel Buddy 🧳✈️
 
 
 ## Index 📝
@@ -16,9 +16,7 @@
 - [Screenshots](#screenshots-)
 
 ## Description 💡
-
-
-
+Travel Buddy is a travel planner app that provides recommendations of tourist attractions to its registered users. The primary objective of this development is to enable users to find uselful information about weather and tourist attractions before travelling to a certain destinatioon.
 
 ## Installation 💾
 
@@ -29,7 +27,7 @@
 
 ### Project Installation
 
-1. Clone the repository:
+1. Clone the frontend repository:
 
 ```bash
   git clone https://github.com/Carlassanchez24/TravelBuddy.git
@@ -44,6 +42,12 @@
 ```bash
   npm i
   npm run dev
+```
+
+4. Clone the backend repository and follow its instructions:
+
+```bash
+  git clone https://github.com/jess-ar/TravelBuddyBack
 ```
 
 
@@ -66,9 +70,9 @@ In order to visualize the project:
 ├── public
 ├── src
 │   ├── components/
-│   │   ├── 
-│   │   ├── 
-│   │   └── 
+│   │   ├── ui
+│   │         ├── 
+│   │         └── 
 │   ├── config
 │   ├── hooks
 │   ├── layout
@@ -78,13 +82,15 @@ In order to visualize the project:
 │   ├── utils
 │   ├── index.css
 │   └── main.jsx
+│   └── setupTests.js
 ├── components.json
+├── eslint.config.js
 ├── index.html
-├── README.md
 ├── jsconfig.json
 ├── package-lock.json
 ├── package.json
 ├── postcss.config.js
+├── README.md
 ├── tailwind.config.js
 └── vite.config.js
 
@@ -93,9 +99,9 @@ In order to visualize the project:
 - **public/:** Contains the project's static resources such as images, icons, and fonts.
 - **src/:** Contains the source files of the application.
   - **_components/:_** Contains React's reusable components.
-    - **_homepage/:_** Contains all the components, separated by individual folders, that make up the project's homepage.
+    -  **_ui/:_** Contains the components imported from the shadcn library.  
+    - **_Home/:_** Contains all the components that make up the project's homepage.
     - **_tracker/:_** Contains all the components, separated by individual folders, that make up the tracker section of the project.
-    - **_ui/:_** Contains the components imported from the shadcn library.
   - **_config/:_** Contains the urls.js file, which helps us streamline the API call.
   - **layout:** Folder containing the paths to the application's dynamic pages.
   - **_pages:_** Folder containing the paths to the application's dynamic pages.
