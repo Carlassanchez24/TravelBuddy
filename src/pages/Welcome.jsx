@@ -26,7 +26,7 @@ const Page1 = () => {
       </div>
       <div className="flex flex-col items-center w-full">
         <Button className="w-[334px] mb-4 font-roboto" onClick={() => navigate('/login')}>Log in</Button>
-        <Button textColor="black" className="w-[334px] h-[50px] rounded-full text-16 bg-secondaryWhite shadow-lg font-roboto" onClick={() => navigate('/page3')}>
+        <Button textColor="black" className="w-[334px] h-[50px] rounded-full text-16 bg-secondaryWhite shadow-lg font-roboto" onClick={() => navigate('/SignUp')}>
           Create Account
         </Button>
       </div>

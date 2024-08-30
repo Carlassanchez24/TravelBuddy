@@ -15,7 +15,7 @@ describe('Navbar', () => {
 
         expect(screen.getByLabelText(/Home/i)).toBeInTheDocument();
         expect(screen.getByLabelText(/Account/i)).toBeInTheDocument();
-        expect(screen.getByLabelText(/Chatbot/i)).toBeInTheDocument();
+        expect(screen.getByLabelText(/Inspireme/i)).toBeInTheDocument();
     });
 
     it('displays the correct text for each link', () => {
@@ -28,7 +28,7 @@ describe('Navbar', () => {
 
         expect(screen.getByText(/Home/i)).toBeInTheDocument();
         expect(screen.getByText(/Account/i)).toBeInTheDocument();
-        expect(screen.getByText(/Chatbot/i)).toBeInTheDocument();
+        expect(screen.getByText(/Inspireme/i)).toBeInTheDocument();
     });
 
     it('applies the correct styles when a link is active', () => {
