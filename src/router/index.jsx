@@ -5,6 +5,7 @@ import Welcome from '@/pages/Welcome';
 import Login from '@/pages/Login';
 import SignUp from '@/pages/SignUp';
 import UnderConstruction from '@/components/UnderConstruction';
+import TravelFilter from '@/pages/TravelFilter';
 
 
 const router = createBrowserRouter([
@@ -29,6 +30,11 @@ const router = createBrowserRouter([
                 path: 'signup',
                 element: <SignUp/>,
                 errorElement: <UnderConstruction />,
+            },
+            {
+                path: 'travelfilter',
+                element: <TravelFilter/>,
+                errorElement: <TravelFilter />,
             },
         ],
     },
