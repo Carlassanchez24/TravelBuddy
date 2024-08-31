@@ -164,10 +164,14 @@ Naming of directories and files following the scheme below:
 
 ## Screenshots 📸
 
-<a href="https://ibb.co/Hxc5kLH"><img src="https://i.ibb.co/0F0HdpG/INSPIRA-ME.png" alt="INSPIRA-ME" border="0"></a>
-![HOME]()
+![HOME](https://ibb.co/Hxc5kLH)
 ![WELCOME]()
 ![LOGIN]()
 ![SIGNUP]()
 ![INSPIRATION]()
+
+
+
+
+
 
