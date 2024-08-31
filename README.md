@@ -168,7 +168,6 @@ Naming of directories and files following the scheme below:
 ![WELCOME](https://i.ibb.co/VgdzWKL/WELCOME.png)
 ![LOGIN](https://i.ibb.co/hgGg5jP/LOGIN.png)
 ![SIGNUP](https://i.ibb.co/QdRJ9Jr/SIGN-UP.png)
-![INSPIRATION](https://i.ibb.co/Zz6YgT5/INSPIRAME.png)
 
 
 
