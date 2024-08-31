@@ -11,7 +11,7 @@ const LoginTest = () => {
         try {
             const result = await loginUser(email, password);
             const { token } = result;
-            localStorage.setItem('token', token); // Guardar el token en localStorage
+            localStorage.setItem('token', token); 
             setMessage('Usuario logueado con éxito');
             console.log(result);
         } catch (error) {

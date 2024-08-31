@@ -1,9 +1,6 @@
-
 import axios from "axios";
 
-
 const API_URL = 'http://127.0.0.1:8000/api/users';
-
 
 const apiClient = axios.create({
     baseURL: API_URL,
@@ -12,16 +9,15 @@ const apiClient = axios.create({
     },
 });
 
-
 export const loginUser = async (email, password) => {
     try {
-        const response = await axios.post('http://127.0.0.1:8000/api/users/login/', {
+        const response = await axios.post(`${API_URL}/login/`, {
             email,
             password
         });
         return response.data;
     } catch (error) {
-        return new Error(error.response?.data?.error || 'An error occurred');
+        throw new Error(error.response?.data?.error || 'An error occurred');
     }
 };
 
@@ -37,7 +33,6 @@ export const registerUser = async (username, email, password) => {
         } else if (error.request) {
             return { success: false, error: 'Network error. Please try again later.' };
         } else {
-
             return { success: false, error: 'An unexpected error occurred. Please try again.' };
         }
     }

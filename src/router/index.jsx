@@ -1,16 +1,15 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Layout1 from '@/layout/Layout1';
-import Welcome from '@/pages/Welcome'
+import Welcome from '@/pages/Welcome';
 import Login from '@/pages/Login';
 import SignUp from '@/pages/SignUp';
-import UnderConstruction from '@/components/UnderConstruction';
 import Inspireme from '@/pages/Inspireme';
 import TravelFilter from '@/pages/TravelFilter';
 import Home from '@/pages/Home';
 import Account from '@/pages/Account';
 import EditProfile from '@/components/ComponentsAccounts/EditProfile';
 import AccountStart from '@/components/ComponentsAccounts/AccountStart';
-
+import PrivateRoute from '@/components/PrivateRoute';
 
 const router = createBrowserRouter([
     {
@@ -19,47 +18,60 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <Home/>,
+                element: <Home />,
             },
             {
                 path: 'welcome',
-                element: <Welcome/>
+                element: <Welcome />
             },
             {
                 path: 'login',
                 element: <Login />,
-                errorElement: <UnderConstruction />,
             },
             {
                 path: 'signup',
-                element: <SignUp/>,
-                errorElement: <UnderConstruction />,
+                element: <SignUp />,
             },
             {
                 path: 'account',
-                element: <Account/>,
-                errorElement: <UnderConstruction />,
+                element: (
+                    <PrivateRoute>
+                        <Account />
+                    </PrivateRoute>
+                ),
             },
             {
                 path: 'inspireme',
-                element: <Inspireme/>,
+                element: (
+                    <PrivateRoute>
+                        <Inspireme />
+                    </PrivateRoute>
+                ),
             },
             {
-                path: '*', 
-                element: <UnderConstruction/>,
+                path: 'travelfilter',
+                element: <TravelFilter />,
             },
             {
-                path: 'travelfilter', 
-                element: <TravelFilter/>,
+                path: 'editProfile',
+                element: (
+                    <PrivateRoute>
+                        <EditProfile />
+                    </PrivateRoute>
+                ),
             },
             {
-                path: 'editProfile', 
-                element: <EditProfile/>,
+                path: 'accountStart',
+                element: (
+                    <PrivateRoute>
+                        <AccountStart />
+                    </PrivateRoute>
+                ),
             },
             {
-                path: 'accountStart', 
-                element: <AccountStart/>,
-            }
+                path: '*',
+                element: <Home />,  // Si alguien intenta acceder a una ruta inexistente, lo redirige a Home
+            },
         ],
     },
 ]);
