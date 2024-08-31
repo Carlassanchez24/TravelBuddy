@@ -163,3 +163,10 @@ Naming of directories and files following the scheme below:
 
 
 ## Screenshots 📸
+
+![HOME](https://i.ibb.co/KqW3kYN/HOME.png)
+![WELCOME](https://i.ibb.co/pzg6tMf/WELCOME.png)
+![LOGIN](https://i.ibb.co/zfY6nRg/LOGIN.png)
+![SIGNUP](https://i.ibb.co/GtZzbf5/INSPIRA-ME.png)
+![INSPIRATION](https://i.ibb.co/Ry9h57N/LOGIN.jpg)
+
