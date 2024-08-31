@@ -11,10 +11,14 @@ const RegisterTest = () => {
     const handleRegister = async () => {
         try {
             const result = await registerUser(username, email, password);
-            setMessage('Usuario registrado con éxito');
-            console.log(result);
+            if (result.success) {
+                setMessage('User registered successfully');
+                console.log(result.data);
+            } else {
+                setMessage(result.error || 'An error occurred during registration');
+            }
         } catch (error) {
-            setMessage('Error al registrar el usuario');
+            setMessage('An unexpected error occurred.');
             console.error(error);
         }
     };
@@ -23,7 +27,7 @@ const RegisterTest = () => {
         <div className="flex items-center justify-center min-h-screen bg-gray-100">
             <div className="relative flex flex-col justify-start w-full max-w-md pb-40">
                 <h2 className="mb-12 text-2xl font-bold text-left">Prueba de Registro</h2>
-                {message && <p className={`text-center mb-4 ${message.includes('éxito') ? 'text-green-500' : 'text-red-500'}`}>{message}</p>}
+                {message && <p className={`text-center mb-4 ${message.includes('successfully') ? 'text-green-500' : 'text-red-500'}`}>{message}</p>}
                 <div className="mb-4">
                     <input
                         type="text"
