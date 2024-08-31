@@ -21,7 +21,7 @@ const Navbar = () => {
                 </li>
                 <li className="flex flex-col items-center group">
                     <NavLink 
-                        to="/UnderConstruccion" 
+                        to="/Account" 
                         className={({ isActive }) => 
                             `flex flex-col items-center ${isActive ? 'text-primary-foreground' : ''} transition-colors duration-300`}
                         aria-label="Account"

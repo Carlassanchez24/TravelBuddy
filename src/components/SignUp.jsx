@@ -55,13 +55,11 @@ function SignUp() {
     }
     catch (error) {
       setError('Registration failed. Please try again.');
-
     }
 
   };
 
   return (
-
     <>
 
       <div className="min-h-screen flex items-center justify-center bg-gray-100 ">
@@ -125,12 +123,11 @@ function SignUp() {
               
               <Button
                 type="submit"
-                className=" text-white rounded-full font-semibold hover:bg-blue-700 transition-colors " onClick={() => navigate('/TravelFilter')}
+                className=" text-white rounded-full font-semibold hover:bg-blue-700 transition-colors " 
+                // onClick={() => navigate('/TravelFilter')}
 
               >
-
                 Sign up
-
               </Button>
 
               <div className="w-[334px] mb-4 text-center mt-6 text-sm text-gray-600">
