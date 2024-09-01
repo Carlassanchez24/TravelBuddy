@@ -4,31 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import CardsTravel from '@/components/CardsTravel';
 import CardsDestination from '@/components/CardsDestination';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 
 const TravelApp = () => {
   const [query, setQuery] = useState('');
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-
-
-      <div className="relative mx-0 p-0 rounded-lg shadow-xl flex flex-col items-center bg-gray-100">
-        
-        <div className=" relative flex flex-col justify-start pb-40">
-          <div className="relative">
-            <img
-              src="/images/inspirete.png"
-              alt="Travel"
-              className="w-full h-auto object-cover rounded-t-lg"
-            />
-            <div className="absolute top-32 left-0 w-full h-full flex flex-col justify-center items-center text-white">
-              <h1 className="text-2xl font-bold">Where are you going next?</h1>
-            </div>
-          </div>
-
-  const navigate = useNavigate(); 
-
 
   const handleNavigate = () => {
     navigate('/travelfilter');
@@ -54,6 +36,7 @@ const TravelApp = () => {
       setLoading(false);
     }
   };
+  const navigate = useNavigate();
 
   return (
     <div className="relative flex flex-col items-center p-0 mx-0 bg-gray-100 rounded-lg shadow-xl">
@@ -86,12 +69,12 @@ const TravelApp = () => {
           <div className="my-4 text-center">
             <span className="text-gray-500">or</span>
           </div>
-          <button 
-              className="w-full px-4 py-2 mt-2 text-center text-white rounded-full bg-primaryBlue"
-              onClick={handleNavigate} 
-            >
-              Tell us about yourself
-            </button>
+          <button
+            className="w-full px-4 py-2 mt-2 text-center text-white rounded-full bg-primaryBlue"
+            onClick={handleNavigate}
+          >
+            Tell us about yourself
+          </button>
         </div>
 
         <div className="p-4">
@@ -153,3 +136,4 @@ const TravelApp = () => {
 };
 
 export default TravelApp;
+
