@@ -115,17 +115,11 @@ function SignUp() {
                   className="absolute inset-y-0 right-0 flex items-center pr-3"
                   aria-label={showPassword ? "Hide password" : "Show password"}
                 >
-
-
                 </button>
               </div>
-
-              
               <Button
                 type="submit"
                 className=" text-white rounded-full font-semibold hover:bg-blue-700 transition-colors " 
-                // onClick={() => navigate('/TravelFilter')}
-
               >
                 Sign up
               </Button>

@@ -9,7 +9,7 @@ const TravelApp = () => {
     <>
 
       <div className="relative mx-0 p-0 rounded-lg shadow-xl flex flex-col items-center bg-gray-100">
-        {/* Imagen de Fondo Expandida */}
+        
         <div className=" relative flex flex-col justify-start pb-40">
           <div className="relative">
             <img
