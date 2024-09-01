@@ -12,7 +12,23 @@ const TravelApp = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
+
+      <div className="relative mx-0 p-0 rounded-lg shadow-xl flex flex-col items-center bg-gray-100">
+        
+        <div className=" relative flex flex-col justify-start pb-40">
+          <div className="relative">
+            <img
+              src="/images/inspirete.png"
+              alt="Travel"
+              className="w-full h-auto object-cover rounded-t-lg"
+            />
+            <div className="absolute top-32 left-0 w-full h-full flex flex-col justify-center items-center text-white">
+              <h1 className="text-2xl font-bold">Where are you going next?</h1>
+            </div>
+          </div>
+
   const navigate = useNavigate(); 
+
 
   const handleNavigate = () => {
     navigate('/travelfilter');

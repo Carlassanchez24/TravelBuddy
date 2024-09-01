@@ -66,6 +66,67 @@ function SignUp() {
   };
 
   return (
+    <>
+
+      <div className="min-h-screen flex items-center justify-center bg-gray-100 ">
+        <div className=" relative flex flex-col justify-start pb-40"><h2 className="text-2xl font-bold  text-left mt-2 mb-12">Sign up</h2>
+          <div className="relative mb-1">
+            {error && <p className="text-red-500 text-center mb-4">{error}</p>}
+
+            <form onSubmit={handleLogin}>
+              <div className="mb-4">
+                <input
+                  type="userName"
+                  placeholder="UserName"
+                  value={userName}
+                  onChange={(e) => setUserName(e.target.value)}
+                  className="shadow-lg w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  required
+
+                />
+
+              </div>
+
+              <div className="mb-4">
+                <input
+                  type="email"
+                  placeholder="Mail"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="shadow-lg w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600"
+
+                />
+
+              </div>
+
+              <div className="mb-8 relative">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="shadow-lg w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute inset-y-0 right-0 flex items-center pr-3"
+                  aria-label={showPassword ? "Hide password" : "Show password"}
+                >
+                  <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute inset-y-0 right-0 flex items-center pr-3"
+                  aria-label={showPassword ? "Hide password" : "Show password"}
+                >
+                </button>
+              </div>
+              <Button
+                type="submit"
+                className=" text-white rounded-full font-semibold hover:bg-blue-700 transition-colors " 
+
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="relative flex flex-col justify-start pb-40">
         <h2 className="mt-2 mb-12 text-2xl font-bold text-left">Sign up</h2>
@@ -110,6 +171,7 @@ function SignUp() {
                 onClick={() => setShowPassword(!showPassword)}
                 className="absolute inset-y-0 right-0 flex items-center pr-3"
                 aria-label={showPassword ? "Hide password" : "Show password"}
+
               >
                 <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
               </button>
