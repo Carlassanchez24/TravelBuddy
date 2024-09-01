@@ -1,4 +1,3 @@
-
 import Checkbox from "@/components/ui/Checkbox"; 
 import Button from "@/components/ui/Button";
 
@@ -7,8 +6,8 @@ const TravelFilter = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="bg-white w-[90%] max-w-md h-[100vh] overflow-y-scroll p-6 shadow-lg"> 
-        <h2 className="text-xl font-semibold mb-6">Tell us about yourself</h2>
-        <div className="flex flex-col h-full justify-between">
+        <h2 className="mb-6 text-xl font-semibold">Tell us about yourself</h2>
+        <div className="flex flex-col justify-between h-full">
           <Checkbox
             title="How do you like to travel?"
             options={["Alone (or By myself)", "With family", "Whatever comes up", "With friends"]}
