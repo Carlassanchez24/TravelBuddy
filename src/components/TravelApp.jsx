@@ -4,15 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import CardsTravel from '@/components/CardsTravel';
 import CardsDestination from '@/components/CardsDestination';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 
 const TravelApp = () => {
   const [query, setQuery] = useState('');
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-
-  const navigate = useNavigate(); 
 
   const handleNavigate = () => {
     navigate('/travelfilter');
@@ -38,6 +36,7 @@ const TravelApp = () => {
       setLoading(false);
     }
   };
+  const navigate = useNavigate();
 
   return (
     <div className="relative flex flex-col items-center p-0 mx-0 bg-gray-100 rounded-lg shadow-xl">
@@ -70,12 +69,12 @@ const TravelApp = () => {
           <div className="my-4 text-center">
             <span className="text-gray-500">or</span>
           </div>
-          <button 
-              className="w-full px-4 py-2 mt-2 text-center text-white rounded-full bg-primaryBlue"
-              onClick={handleNavigate} 
-            >
-              Tell us about yourself
-            </button>
+          <button
+            className="w-full px-4 py-2 mt-2 text-center text-white rounded-full bg-primaryBlue"
+            onClick={handleNavigate}
+          >
+            Tell us about yourself
+          </button>
         </div>
 
         <div className="p-4">
@@ -137,3 +136,4 @@ const TravelApp = () => {
 };
 
 export default TravelApp;
+
