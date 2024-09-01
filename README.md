@@ -1,6 +1,5 @@
 # Travel Buddy 🧳✈️
 
-
 ## Index 📝
 
 - [Description](#description-)
@@ -15,41 +14,51 @@
 - [Developers](#developers-)
 - [Screenshots](#screenshots-)
 
+<br>
+
 ## Description 💡
 Travel Buddy is a travel planner app that provides recommendations of tourist attractions to its registered users. The goal of this development is to enable users to find uselful information about weather and tourist attractions before travelling to a certain destination. Take a look at our app here https://travel-buddy-f5.netlify.app/
 
+<br>
+
 ## Installation 💾
+<br>
 
 ### Prerequisites
 
 - Visual Studio Code, Git Bash, Vite, Node.js (14 or superior), npm (version 6 or superior), React, TailwindCSS 
-
+<br>
 
 ### Project Installation
 
-1. Clone the frontend repository:
+1. **Fork our frontend repository**
+
+   Open the repository [TravelBuddy](https://github.com/Carlassanchez24/TravelBuddy) and click the "Fork" button located in the upper right corner of the page. It creates a copy of our repository in your own Github account.
+
+
+2. **Clone your forked repository**
+
+   Open a Git Bash terminal and clone your forked repository. You can chose a new name for your project:
 
 ```bash
-  git clone https://github.com/Carlassanchez24/TravelBuddy.git
+# Clone this repository 
+git clone https://github.com/your-github-profile/your-project-name.git
 ```
 
-2. Enter the project directory:
+3. **In VSCode, enter the project's directory you've just cloned**
+
 ```bash
-  cd TravelBuddy
+  cd your-project-name
 ```
 
-3. Install the dependencies:
+4. **Install the dependencies:
 ```bash
   npm i
   npm run dev
 ```
 
-4. Clone the backend repository and follow its instructions:
-
-```bash
-  git clone https://github.com/jess-ar/TravelBuddyBack
-```
-
+4. Go to our backend repository [TravelBuddyBack](https://github.com/jess-ar/TravelBuddyBack) and follow its README's instructions:
+<br>
 
 ## Use ⌨️
 
@@ -62,6 +71,7 @@ In order to visualize the project:
    ```
 2. Open the local host in your browser to view the application.
 
+<br>
 
 ## Project Structure 📐
 
@@ -106,6 +116,7 @@ In order to visualize the project:
   - **_router:_** Contains the file index.jsx with the application's routing logic.
   - **_services:_** Contains the file useApi.jsx with the API call reused in all sections of the application.
 
+<br>
 
 ## Technologies 🔬
 
@@ -117,14 +128,17 @@ In order to visualize the project:
 - [TailwindCSS](https://tailwindcss.com/)
 - [Shadcn // ui](https://ui.shadcn.com/)
 
+<br>
 
 ## Contribution 💻
 
-1. Fork the repository.
+1. Fork the repository
 2. Create a new branch: `git checkout -b feature-name`.
 3. Make your changes and commit.
 4. Push your branch to your fork: `git push origin feature-name`.
 5. Open a pull request.
+
+<br>
 
 ## Project Conventions
 
@@ -143,6 +157,7 @@ Naming of directories and files following the scheme below:
     iamAComponent 📂
         IamAComponent.jsx
 ```
+<br>
 
 ## Developers 👩‍💻
 
@@ -161,14 +176,14 @@ Naming of directories and files following the scheme below:
 <p> <a href="https://github.com/loren-2">
     <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"> **Lorena**</a></p>
 
+<br>
 
 ## Screenshots 📸
 
-![HOME](https://ibb.co/Hxc5kLH)
-![WELCOME]()
-![LOGIN]()
-![SIGNUP]()
-![INSPIRATION]()
+![HOME](https://i.ibb.co/J7bVZt1/HOME.jpg)
+![WELCOME](https://i.ibb.co/VgdzWKL/WELCOME.png)
+![LOGIN](https://i.ibb.co/hgGg5jP/LOGIN.png)
+![SIGNUP](https://i.ibb.co/QdRJ9Jr/SIGN-UP.png)
 
 
 
