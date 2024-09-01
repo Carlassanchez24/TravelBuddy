@@ -1,15 +1,25 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 function AccountStart() {
     const navigate = useNavigate();
 
+    const handleLogout = async () => {
+        try {
+            await axios.post('http://127.0.0.1:8000/api/users/logout/');
+            localStorage.removeItem('token'); 
+            navigate('/login');  
+        } catch (error) {
+            console.error("Error during logout:", error);
+        }
+    };
+
     return (
-        <div className="min-h-screen bg-gray-100 flex flex-col items-center">
-            <div className="w-full max-w-xs p-8 bg-white shadow-md rounded-lg mt-12">
+        <div className="flex flex-col items-center min-h-screen bg-gray-100">
+            <div className="w-full max-w-xs p-8 mt-12 bg-white rounded-lg shadow-md">
                 <div className="flex flex-col items-center">
                     <img
-                        className="w-24 h-24 rounded-full mb-4"
+                        className="w-24 h-24 mb-4 rounded-full"
                         src="/path-to-avatar/aqua.png"
                         alt="User Avatar"
                     />
@@ -34,7 +44,7 @@ function AccountStart() {
                         <p className="text-gray-900">aqua.png</p>
                     </div>
                     <button
-                        className="w-full bg-blue-500 text-white py-2 rounded-lg flex items-center justify-center"
+                        className="flex items-center justify-center w-full py-2 text-white bg-blue-500 rounded-lg"
                         onClick={() => navigate('/EditProfile')}
                     >
                         Edit Profile
@@ -55,8 +65,10 @@ function AccountStart() {
                     </button>
                 </div>
                 <div className="mt-6">
-                    <button className="w-full bg-gray-300 text-gray-700 py-2 rounded-lg"onClick={() => navigate('/inspireme')}>
-                      
+                    <button
+                        className="w-full py-2 text-gray-700 bg-gray-300 rounded-lg"
+                        onClick={handleLogout}
+                    >
                         Log out
                     </button>
                 </div>
@@ -67,15 +79,16 @@ function AccountStart() {
 
 export default AccountStart;
 
+
 // import React from 'react';
 
 // function AccountStart({ userData }) {
 //   return (
-//     <div className="min-h-screen bg-gray-100 flex flex-col items-center">
-//       <div className="w-full max-w-xs p-8 bg-white shadow-md rounded-lg mt-12">
+//     <div className="flex flex-col items-center min-h-screen bg-gray-100">
+//       <div className="w-full max-w-xs p-8 mt-12 bg-white rounded-lg shadow-md">
 //         <div className="flex flex-col items-center">
 //           <img
-//             className="w-24 h-24 rounded-full mb-4"
+//             className="w-24 h-24 mb-4 rounded-full"
 //             src={`/images/add-user.png${userData.avatar}`}
 //             // /images/add-user.png
 //             alt="User Avatar"
@@ -97,7 +110,7 @@ export default AccountStart;
 //             <p className="text-gray-900">{userData.avatar}</p>
 //           </div>
 //           <button
-//             className="w-full bg-blue-500 text-white py-2 rounded-lg flex items-center justify-center"
+//             className="flex items-center justify-center w-full py-2 text-white bg-blue-500 rounded-lg"
 //             // onClick={() => navigate('/EditProfile')}
 //           >
 //             Edit Profile
@@ -118,7 +131,7 @@ export default AccountStart;
 //           </button>
 //         </div>
 //         <div className="mt-6">
-//           <button className="w-full bg-gray-300 text-gray-700 py-2 rounded-lg">
+//           <button className="w-full py-2 text-gray-700 bg-gray-300 rounded-lg">
 //             Log out
 //           </button>
 //         </div>
