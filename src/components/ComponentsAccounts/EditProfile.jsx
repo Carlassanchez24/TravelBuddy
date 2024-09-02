@@ -141,8 +141,3 @@ EditProfile.propTypes = {
 
 export default EditProfile;
 
-
-
-
-
-
