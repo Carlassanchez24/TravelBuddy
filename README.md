@@ -17,7 +17,7 @@
 <br>
 
 ## Description 💡
-Travel Buddy is a travel planner app that provides recommendations of tourist attractions to its registered users. The goal of this development is to enable users to find uselful information about weather and tourist attractions before travelling to a certain destination. Take a look at our app here https://travel-buddy-f5.netlify.app/
+Travel Buddy is a travel planner app that provides recommendations of tourist attractions to its registered users. The goal of this development is to enable users to find uselful information about weather and tourist attractions before travelling to a certain destination. Take a look at our app here [Travel Buddy](https://travel-buddy-femcoders.netlify.app/)
 
 <br>
 
