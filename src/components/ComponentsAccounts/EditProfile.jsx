@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../ui/Button';
+import axios from 'axios';
+import PropTypes from 'prop-types';
 
-function EditProfile() {
+
+function EditProfile({ userData }) {
     const navigate = useNavigate();
-    const [selectedAvatar, setSelectedAvatar] = useState('/images/agregar-usuario.png');
-    const [avatarOptions, setAvatarOptions] = useState([
+    const [selectedAvatar, setSelectedAvatar] = useState(userData?.avatar || '/images/agregar-usuario.png');
+    const [avatarOptions] = useState([
         '/images/account1.png',
         '/images/account2.png',
         '/images/account3.png',
@@ -15,10 +18,43 @@ function EditProfile() {
     const handleAvatarSelect = (avatar) => {
         setSelectedAvatar(avatar);
     };
+    const username = userData?.username;
+
+
+    const handleDelete = async () => {
+        try {
+            const token = localStorage.getItem('token');
+            if (!token) {
+                console.error('No token found');
+                return;
+            }
+
+            console.log('Username to delete:', username);
+
+
+            const response = await axios.delete(`http://127.0.0.1:8000/api/users/delete/${username}`, {
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            if (response.status === 204) {
+                console.log('Account deleted successfully');
+                localStorage.removeItem('token');
+                navigate('/signup');
+            } else {
+                console.error('Failed to delete account:', response.data);
+            }
+        } catch (error) {
+            console.error('Error deleting account:', error);
+        }
+
+    };
 
     return (
-        <div className="min-h-screen bg-gray-100 flex flex-col items-center">
-            <div className="w-full max-w-xs p-8 bg-white shadow-md rounded-lg mt-12">
+        <div className="flex flex-col items-center min-h-screen bg-gray-100">
+            <div className="w-full max-w-xs p-8 mt-12 bg-white rounded-lg shadow-md">
                 <button
                     className="text-blue-500"
                     onClick={() => navigate('/accountStart')}
@@ -27,9 +63,9 @@ function EditProfile() {
                 </button>
 
                 <div className="flex flex-col items-center mt-2">
-                    <h2 className="text-xl font-bold -ml-28 mt-6">Edit Profile</h2>
+                    <h2 className="mt-6 text-xl font-bold -ml-28">Edit Profile</h2>
                     <img
-                        className="w-24 h-24 rounded-full mb-4 ml-32 -mt-8"
+                        className="w-24 h-24 mb-4 ml-32 -mt-8 rounded-full"
                         src={selectedAvatar}
                         alt="Selected Avatar"
                     />
@@ -78,21 +114,30 @@ function EditProfile() {
 
                     <Button
                         type="submit"
-                        className="w-full bg-blue-500 text-white py-2 rounded-lg"
+                        className="w-full py-2 text-white bg-blue-500 rounded-lg"
                     >
                         Save Changes
                     </Button>
-                    <Button
+                    <button
                         type="button"
-                        className="w-full bg-red-500 text-white py-2 rounded-lg mt-4"
+                        className="w-full py-2 mt-2 text-white bg-red-500 rounded-lg"
+                        onClick={handleDelete}  
                     >
                         Delete Account
-                    </Button>
+                    </button>
                 </form>
             </div>
         </div>
     );
 }
+
+EditProfile.propTypes = {
+    userData: PropTypes.shape({
+        username: PropTypes.string,
+        email: PropTypes.string,
+        avatar: PropTypes.string,
+    })
+};
 
 export default EditProfile;
 

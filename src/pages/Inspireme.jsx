@@ -1,12 +1,12 @@
-import PhotoSearch from "@/components/PhotoSearch"
 
+import TravelApp from "@/components/TravelApp";
 
 const Inspireme = () => {
-  return (
-    <div>
-    <PhotoSearch />
-    </div>
-  )
-}
+    return (
+        <div>
+            <TravelApp />
+        </div>
+    );
+};
 
-export default Inspireme
+export default Inspireme;
