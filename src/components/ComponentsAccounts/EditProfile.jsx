@@ -73,7 +73,7 @@ function EditProfile({ userData }) {
 
                 <form className="-mt-2">
                     <div className="mb-4">
-                        <label className="block text-gray-700">Username</label>
+                        <label htmlFor="Username" className="block text-gray-700">Username</label>
                         <input
                             type="text"
                             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
@@ -81,7 +81,7 @@ function EditProfile({ userData }) {
                         />
                     </div>
                     <div className="mb-4">
-                        <label className="block text-gray-700">Email</label>
+                        <label htmlFor="Email" className="block text-gray-700">Email</label>
                         <input
                             type="email"
                             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
@@ -89,7 +89,7 @@ function EditProfile({ userData }) {
                         />
                     </div>
                     <div className="mb-4">
-                        <label className="block text-gray-700">Password</label>
+                        <label htmlFor="Password" className="block text-gray-700">Password</label>
                         <input
                             type="password"
                             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
@@ -118,13 +118,14 @@ function EditProfile({ userData }) {
                     >
                         Save Changes
                     </Button>
-                    <button
-                        type="button"
-                        className="w-full py-2 mt-2 text-white bg-red-500 rounded-lg"
-                        onClick={handleDelete}  
-                    >
-                        Delete Account
-                    </button>
+                    <Button
+                          type="button"
+                          onClick={handleDelete}
+                          className="w-full px-4 py-2 mt-4 text-white bg-red-500 rounded-lg"
+                      >
+                          Delete Account
+                        
+                    </Button>
                 </form>
             </div>
         </div>
