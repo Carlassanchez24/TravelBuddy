@@ -15,7 +15,7 @@ function SignUp() {
   const [username, setUsername] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
-  const [message, setMessage] = useState("");
+ 
 
   const handleLogin = async (e) => {
     e.preventDefault();
